@@ -1,0 +1,60 @@
+/* phần content */
+.content{
+    flex: 1;
+    overflow: hidden;
+}
+
+.pnl-content{
+    display: flex;
+    flex-flow: column;
+    background-color: #fff;
+    margin: 0px 20px 20px 20px;
+    height: calc(100% - 90px);
+}
+
+/* phần tiêu đề với nút thêm */
+.title-action-bar{
+    display: flex;
+    padding: 10px 20px;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-action-bar .title{
+    font-size: 24px;
+    font-family: NotoSans-Bold;
+}
+
+/* phần lọc dữ liệu */
+.filter-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+}
+.filter-bar .search-group .text-filter{
+    padding: 6px 10px;
+    padding-right: 30px;
+    width: 260px;
+}
+.filter-bar .search-group .text-filter::placeholder{
+    font-family: NotoSans-Italic;
+}
+.filter-bar .search-group .search-icon{
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 7px;
+}
+.filter-bar .icon{
+    margin-left: 12px;
+}
+.filter-bar .icon:first-child{
+    margin-left: 6px;
+}
+.filter-bar .icon:last-child{
+    margin-right: 12px;
+}
+.filter-bar .text-filter:focus~.search-icon{
+    background-position: -317px -148px;
+}

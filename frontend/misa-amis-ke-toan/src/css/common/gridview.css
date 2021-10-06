@@ -1,0 +1,174 @@
+/* css chung */
+.detail-view{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    overflow: hidden;
+    padding: 0px 15px;
+}
+
+.detail-view .gridview{
+    min-width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+/* css cho bảng */
+.detail-view table{
+    min-width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+.detail-view td,.detail-view th{
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-left: 1px dotted #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.detail-view th{
+    height: 34px;
+    background-color: #eceef1 !important;
+    font-family: NotoSans-SemiBold;
+    text-transform: uppercase;
+    border-left: 1px solid #c7c7c7;
+}
+.detail-view .gridview::-webkit-scrollbar-track{
+    margin-top: 34px;
+}
+
+/* cột checkbox */
+.detail-view .employee-checkbox{
+    border-left: none;
+    border-right: 1px dotted #c7c7c7;
+}
+.detail-view th.employee-checkbox{
+    border-right: 1px solid #c7c7c7;
+}
+
+.detail-view .employee-checkbox+td,
+.detail-view .employee-checkbox+th
+{
+    border-left: none;
+}
+
+/* cột hành động */
+.detail-view td.action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detail-view td.action .icon{
+    width: 24px;
+    height: 16px;
+    border: 1px solid transparent;
+}
+.detail-view td.action .icon:hover,
+.detail-view td.action .icon:focus{
+    border: 1px solid #0075c0;
+}
+.detail-view td.action .btn{
+    height: 25px;
+}
+.detail-view td.action .btn:hover,
+.detail-view td.action .btn:focus{
+    border: 1px solid #0075c0;
+}
+
+/* menu popup */
+.detail-view .context-menu{
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
+    right: 50px;
+    z-index: 1;
+}
+
+.detail-view .context-menu .context-menu-item{
+    display: block;
+    padding: 7px 10px;
+}
+.detail-view .context-menu .context-menu-item:hover{
+    background-color: #f3f8f8;
+    color: #2ca01c;
+}
+
+/*make the world sticky*/
+
+.detail-view table th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.detail-view .action{
+    position: sticky;
+    background-color: #fff;
+    right: 0;
+}
+
+.detail-view .employee-checkbox{
+    position: sticky;
+    background-color: #fff;
+    left: 0;
+    z-index: 1;
+}
+
+.detail-view table th.employee-checkbox{
+    z-index: 2;
+}
+
+/*khi chọn*/
+.detail-view .selected td{
+    background-color: #e5f5f5 !important;
+}
+.detail-view  table tr:hover td{
+    background-color: #f4f5f8;
+}
+
+/*khi không có dữ liệu*/
+.detail-view .no-record{
+    margin-top: 50px;
+    background-image: url(../../assets/img/no-record.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* loader */
+@keyframes moving-gradient {
+    0% { background-position: -250px 0; }
+    100% { background-position: 250px 0; }
+}
+
+.detail-view .gridview .loading-container .loading-row{
+    height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.detail-view .gridview .loading-container .loading-content{
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(to right, #eee 20%, #ddd 50%, #eee 80%);
+    background-size: 500px 100px;
+    animation-name: moving-gradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}

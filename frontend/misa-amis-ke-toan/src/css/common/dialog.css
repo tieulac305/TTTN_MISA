@@ -1,0 +1,86 @@
+/* css chung */
+.dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.dialog .d-flex{
+    display: flex;
+}
+
+.dialog .cover-background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.dialog .resizable-component{
+    position: relative;
+    min-width: 350px;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.dialog .modal-content
+{
+    position: absolute;
+    background-color: #fff;
+    flex-flow: column;
+    border-radius: 3px;
+}
+
+.dialog .modal-header{
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+.dialog.popup .modal-header{
+    padding-bottom: 0px;
+    padding-top: 24px;
+}
+.dialog .modal-title{
+    font-family: NotoSans-SemiBold;
+    font-size: 24px;
+}
+
+.dialog .modal-body{
+    height: calc(100% - 60px);
+    overflow-x: hidden;
+}
+.dialog.popup .modal-body{
+    padding: 30px 30px 10px 30px;
+    align-items: center;
+}
+.dialog.popup .modal-body div{
+    font-size: 14px;
+}
+.dialog.popup .modal-body-icon{
+    padding-right: 10px;
+}
+
+.dialog .modal-footer{
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+    margin: 0px 32px 10px;
+    justify-content: space-between;
+}
+
+.dialog .btn-secondary{
+    margin-right: 10px;
+}
+
+.dialog table{
+    min-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+.dialog td{
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid black;
+}

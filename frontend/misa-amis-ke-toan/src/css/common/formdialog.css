@@ -1,0 +1,167 @@
+/* css chung */
+.form-dialog .modal-header .left{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-dialog .modal-content .modal-body{
+    padding: 0px 32px 20px;
+}
+/* css cho các ô nhập */
+.form-dialog .form-group{
+    position: relative;
+}
+.form-dialog .control-label{
+    font-family: NotoSans-SemiBold;
+    display: block;
+    padding-bottom: 6px;
+}
+.form-dialog .form-group .form-control{
+    width: 100%;
+}
+
+.form-dialog input {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+.form-dialog date-picker{
+    height: 30px;
+    margin: 0;
+    padding-left: 10px;
+}
+/* ô nhập invalid */
+.form-dialog .invalid{
+    border: 1px solid red;
+}
+.form-dialog .invalid:hover{
+    border: 1px solid red;
+}
+
+/*multiselect invalid*/
+.form-dialog .invalid.multiselect{
+    border: none;
+}
+.form-dialog .invalid.multiselect .multiselect__tags{
+    border: 1px solid red;
+}
+.form-dialog .invalid.multiselect:hover .multiselect__tags{
+    border: 1px solid red;
+}
+
+/* thông báo lỗi khi hover */
+.form-dialog .invalid~.form-message{
+    display: none;
+    position: absolute;
+    left: 10%;
+    bottom: -10px;
+    white-space: nowrap;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.form-dialog .invalid:hover~.form-message{
+    display: inline-block;
+}
+
+.form-dialog .invalid:focus~.form-message{
+    display: none;
+}
+
+.form-dialog .icon{
+    margin-left: 10px;
+}
+
+/*datepicker*/
+.mx-input{
+    height: 32px;
+    border: 1px solid #babec5;
+    border-radius: 2px;
+    font-size: 13px;
+}
+.mx-input::placeholder{
+    font-style: italic;
+}
+.mx-input:hover{
+    outline: 1px solid #e2e2e2;
+    border-color: #babec5;
+}
+.mx-input:focus{
+    border: 1px solid #2ca01c;
+}
+.mx-table-date th{
+    font-weight: bold;
+}
+.mx-table-date td{
+    border-radius: 50%;
+}
+.mx-table .cell.active{
+    background-color: #80ecb1;
+}
+.mx-table-date td:hover{
+    border: 1px solid #2ca01c;
+}
+
+.mx-table-date .cell.today div{
+    color: #2ca01c;
+}
+
+.mx-table-date .cell.disabled div{
+    color: #bbb;
+}
+
+.mx-btn.mx-btn-text:hover{
+    color: #2ca01c;
+}
+
+/* check box*/
+.form-dialog .checkbox-wrapper{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.form-dialog .checkbox-wrapper label{
+    margin-left: 6px;
+}
+
+/*radio*/
+.gender-space{
+    height: 32px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*chia bố cục*/
+.form-dialog .row{
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    gap: 6px;
+    padding-bottom: 12px;
+}
+.form-dialog .col{
+    width: 50%;
+}
+.form-dialog .col-1{
+    padding-right: 26px;
+}
+.form-dialog .width-100{
+    width: 100%;
+}
+.form-dialog .width-40{
+    width: 40%;
+}
+.form-dialog .width-60{
+    width: 60%;
+}
+.form-dialog .width-25{
+    width: 25%;
+}

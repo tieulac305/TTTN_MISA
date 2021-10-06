@@ -1,0 +1,49 @@
+/* css chung */
+.header{
+    display: flex;
+    height: 48px;
+    flex-flow: row;
+    justify-content: space-between;
+    box-shadow: 3px 6px 6px 0px #f2f2f2;
+    background-color: #fff;
+}
+
+/* css phần chi nhánh */
+.header .left .branch-select{
+    font-family: NotoSans-Bold;
+    margin-left: 12px;
+}
+.header .icon{
+    margin-left: 12px;
+}
+.header .more-icon{
+    margin-left: none;
+    margin-right: 20px;
+}
+
+.header .left{
+    display: flex;
+    align-items: center;
+}
+
+/* css phần user */
+.header .user-nav{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header .user-nav .user-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header .user-nav .user-info .user-avatar{
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header .user-nav .user-info .user-fullname{
+    font-family: NotoSans-Bold;
+}

@@ -1,0 +1,78 @@
+/* css chung */
+.sidebar{
+    display: flex;
+    flex-flow: column;
+    flex-basis: 200px;
+    width: 200px;
+    background-color: #38393d;
+}
+
+.sidebar .navbar{
+    overflow: auto;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.sidebar .icon {
+    margin-left: 6px;
+    margin-right: 12px;
+}
+
+.sidebar .logo-box{
+    display: flex;
+    border-left: 6px solid transparent;
+    align-items: center;
+    min-height: 48px;
+}
+
+.sidebar .logo-icon{
+    height: 32px;
+}
+
+.sidebar .navbar .nav-item{
+    display: flex;
+    border-left: 6px solid transparent;
+    min-height: 42px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .navbar .nav-item:hover{
+    background-color: #5d5d61
+}
+
+.sidebar .navbar .nav-item .nav-item-text{
+    color: #fff;
+}
+
+/* khi được active */
+.sidebar .navbar .nav-item.router-link-active{
+    background-color: #5d5d61;
+    border-left: 6px solid #2ca01c;
+}
+.sidebar .navbar .nav-item.router-link-active .nav-item-text{
+    font-family: NotoSans-Bold;
+}
+
+.sidebar .navbar .nav-item.router-link-active .employee-icon{
+    background-position: -162px -1660px;
+}
+
+/* khi thu nhỏ */
+.sidebar.minimize{
+    flex-basis: 50px;
+}
+.sidebar.minimize .logo-icon{
+    display: none;
+}
+.sidebar.minimize .nav-item-text{
+    display: none;
+}
+
+.sidebar.minimize .option-icon{
+    background-position: -312px -32px;
+}
+
+.sidebar.minimize~.content-wrapper .header .toggle-icon{
+    display: none;
+}

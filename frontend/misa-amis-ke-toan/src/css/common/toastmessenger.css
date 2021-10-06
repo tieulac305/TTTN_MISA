@@ -1,0 +1,67 @@
+/* css chung */
+.toast-messenger {
+	display:flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 350px;
+    height: 60px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #8d9096;
+    /* box-shadow: 0px 3px 6px #888; */
+    border-radius: 4px;
+    position: fixed;
+    z-index: 3;
+    bottom: 80px;
+    right: 50px;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.toast-messenger .toast-message{
+    display: flex;
+    align-items: center;
+}
+
+.toast-messenger .toast-message .toast-icon{
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+    background-image: url('../../assets/img/sprites.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.toast-messenger .toast-close{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* icon cho từng kiểu */
+.toast-messenger.info .toast-message .toast-icon{
+    background-position: -666px -456px;
+}
+
+.toast-messenger.warning .toast-message .toast-icon{
+    background-position: -592px -456px;
+}
+
+.toast-messenger.success .toast-message .toast-icon{
+    background-position: -984px -456px;
+}
+
+.toast-messenger.error .toast-message .toast-icon{
+    background-position: -746px -456px;
+}
+
+/* animation */
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 80px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 80px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
