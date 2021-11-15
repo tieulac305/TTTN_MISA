@@ -317,7 +317,7 @@ export default {
 
             this.paging.pageSize = size;
             // tải lại theo số liệu mới
-            this.getEmployees();
+            this.refresh();
         },
         clearSelectedList(){
             while(this.grid.selectedList.length>0) this.grid.selectedList.pop();
